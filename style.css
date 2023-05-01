@@ -1,0 +1,36 @@
+.magnify {
+    display: block;
+    position: relative;
+    max-width: 200px;
+    cursor: none;
+}
+
+.magnify__img {
+    width: 100%;
+    user-select: none;
+}
+
+.magnify:hover,
+.magnify:active {
+    opacity: 1;
+}
+
+.magnify:hover .magnify__zoomer,
+.magnify:active .magnify__zoomer {
+    opacity: 1;
+    transition: opacity .2s ease-in;
+}
+
+.magnify__zoomer {
+    position: absolute;
+    z-index: 1;
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    border: 2px solid whitesmoke;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px -2px rgba(0, 0, 0, .4);
+    opacity: 0;
+    pointer-events: none;
+}
